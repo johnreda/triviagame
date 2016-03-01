@@ -1,0 +1,44 @@
+.jumbotron{
+	text-align:center;
+}
+
+.footer-container{
+	text-align:center;
+	background-color: #bcbcbc;
+	color: #1c262b;
+	padding: 20px;
+}
+
+.panel{
+	background-color: #bcbcbc;
+	color: #1c262b;
+}
+
+.panel-heading{
+	background-color: #bcbcbc;
+	color: #1c262b;
+}
+
+.list-group-item{
+	background-color: #bcbcbc;
+	color: #1c262b;
+}
+
+
+h2{
+	text-align: center;
+}
+
+li {
+	list-style-type: none;
+	text-align: center;
+	font-size: 24px;
+}
+
+#clock {
+ text-align: center;
+ margin-left: 30px;	
+}
+
+
+
