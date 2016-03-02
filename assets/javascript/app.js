@@ -1,8 +1,10 @@
+
+
 // what's needed
 //var for number of correct answers and number of total questions (to compare score)
 //onclick functions that compare userguess with correct answer 
 //timer -- done
-//questions -- done  (i think)
+//questions -- done  (I think, nope... questions are on the HTML page because they're written in the HTML doc, not because of my attempt at jQuery)
 
 
 
@@ -16,14 +18,14 @@ start();
 
 
 //TIMER
-var startNumber = 61
+var startNumber = 3 //change to 60 to give user 1 minute to answer questions
 
     function run(){
       counter = setInterval(increment, 1000);
     }
     function increment(){
       startNumber--
-      document.getElementById('clock').innerHTML = ('<h2>' + startNumber+ " " + "Seconds Left" + '</h2>');
+      document.getElementById('clock').innerHTML = ('<h2>' + startNumber+ " " + "Seconds Left" + '</h2>'); //updates to HTML
       if (startNumber === 0){
         stop();
         alert("Time's Up!")
@@ -39,17 +41,24 @@ var startNumber = 61
 
 
 //================= VARIABLES ==============================
-var numberQuest = 3
-var correctAns = 0 
+var numberQuest = 3 //number of questions
+var correctAns = 0 //number correct
+var userGuess = "" //what the user is guessing on the page
+var guesses =[];
+
 
 //create onclick events that track the user selection between true/false
 //if they guess correct, correctAns++
 //after all three questions have been answered or if timer == 0, alert with correctAns/numberQuest
 
 //========= MY ATTEMPT AT GETTING js/jQuery to write the questions (they exist in html doc)====================
-document.getElementById("vrai").value = 0;
-document.getElementById("faux").value = 1;
 
+$("#vrai").value = 0; // set the value of TRUE to 0 to match id's of 0 inside the object with questions
+$("#faux").value = 1; // does the same thing for false
+
+
+
+//object holding the questions and the answers. the use of the object makes sense, making things interact with it doesn't.
 var questions = [
 {
    question: "The squirrel invented the airplane:",
@@ -89,6 +98,9 @@ var questions = [
 }
 ]
 
+//===== record clicks ? ========
+document.getElementById("vrai").addEventListener("click", )
+
 
 
 
@@ -99,19 +111,12 @@ var questions = [
 
 //======== FUNCTIONS =============================
 
-function ask(){
-	$('#question1').append(questions[0]);
-	$('#question2').append(questions[1]);
-	$('#question3').append(questions[2]);
-}
-//^^^^not working
-
+//????????????????
 
 
 
 
 //=========== CALLS =============================
-ask()
 
 
 
