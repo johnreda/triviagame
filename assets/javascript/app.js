@@ -1,3 +1,9 @@
+// what's needed
+//var for number of correct answers and number of total questions (to compare score)
+//onclick functions that compare userguess with correct answer 
+//timer -- done
+//questions -- done  (i think)
+
 
 
 //START GAME MESSAGE
@@ -30,8 +36,19 @@ var startNumber = 61
 
     run();
 
-//========= GLOBAL VARIABLES ====================
 
+
+//================= VARIABLES ==============================
+var numberQuest = 3
+var correctAns = 0 
+
+//create onclick events that track the user selection between true/false
+//if they guess correct, correctAns++
+//after all three questions have been answered or if timer == 0, alert with correctAns/numberQuest
+
+//========= MY ATTEMPT AT GETTING js/jQuery to write the questions (they exist in html doc)====================
+document.getElementById("vrai").value = 0;
+document.getElementById("faux").value = 1;
 
 var questions = [
 {
@@ -83,15 +100,18 @@ var questions = [
 //======== FUNCTIONS =============================
 
 function ask(){
-
+	$('#question1').append(questions[0]);
+	$('#question2').append(questions[1]);
+	$('#question3').append(questions[2]);
 }
-
+//^^^^not working
 
 
 
 
 
 //=========== CALLS =============================
+ask()
 
 
 
