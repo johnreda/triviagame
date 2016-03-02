@@ -99,11 +99,16 @@ var questions = [
 ]
 
 //===== record clicks ? ========
-document.getElementById("vrai").addEventListener("click", )
+//document.getElementById("vrai").addEventListener("click", )
 
 
+//=====jQuery to get questions to write using js
 
-
+function ask(){
+$('#question1').append(questions[0].question);
+$('#question2').append(questions[1].question);
+$('#question3').append(questions[2].question);
+}
 
 
 
@@ -118,5 +123,5 @@ document.getElementById("vrai").addEventListener("click", )
 
 //=========== CALLS =============================
 
-
+ask()
 
