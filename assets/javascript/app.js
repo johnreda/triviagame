@@ -20,7 +20,7 @@ start();
 
 
 //TIMER
-var startNumber = 3 //change to 60 to give user 1 minute to answer questions
+var startNumber = 60 
 
     function run(){
       counter = setInterval(increment, 1000);
